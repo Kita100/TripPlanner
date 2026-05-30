@@ -36,7 +36,7 @@ def build_connection():
 
     client = None
     try:
-        client = MongoClient(uri, serverSelectionTimeoutMS=5000)
+        client = MongoClient(uri, serverSelectionTimeoutMS=10000, tls=True if mongo_uri_env else False)
         client.admin.command("ping")
         print("MongoDB connection successful!")
     except ConnectionFailure as e:
