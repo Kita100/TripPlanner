@@ -43,7 +43,10 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    seed_demo_users()
+    try:
+        seed_demo_users()
+    except Exception as e:
+        print(f"Warning: seed_demo_users skipped — DB unavailable at startup: {e}")
     yield
     client.close()
     print("MongoDB disconnected.")
