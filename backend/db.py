@@ -1,5 +1,4 @@
 from pymongo import MongoClient
-from pymongo.errors import ConnectionFailure
 import urllib.parse
 from dotenv import load_dotenv
 import os
@@ -18,12 +17,6 @@ auth_source = os.getenv("DB_AUTH_SOURCE", "admin")
 db_name = os.getenv("DB_NAME", "tripplannerdb")
 
 
-def get_collection(db, name):
-    if name in db.list_collection_names():
-        return db[name]
-    return db.create_collection(name)
-
-
 def build_connection():
     if mongo_uri_env:
         uri = mongo_uri_env          # MongoDB Atlas / full URI (used in production)
@@ -34,29 +27,23 @@ def build_connection():
     else:
         uri = f"mongodb://{host}:{port}/"           # local unauthenticated
 
-    client = None
-    try:
-        client = MongoClient(uri, serverSelectionTimeoutMS=10000, tls=True if mongo_uri_env else False)
-        client.admin.command("ping")
-        print("MongoDB connection successful!")
-    except ConnectionFailure as e:
-        print(f"MongoDB connection failed: {e}")
-        raise
-    except Exception as e:
-        print(f"Unexpected error connecting to MongoDB: {e}")
-        raise
+    # MongoClient is lazy — actual connection happens on first DB operation.
+    # This prevents the server from crashing at startup if Atlas is temporarily unreachable.
+    client = MongoClient(uri, serverSelectionTimeoutMS=10000)
+    print("MongoDB client created (connection is lazy).")
 
     db = client[db_name]
 
+    # Collections are auto-created by MongoDB on first write — no need to pre-create them.
     return (
         client,
-        get_collection(db, "users"),
-        get_collection(db, "trips"),
-        get_collection(db, "destinations"),
-        get_collection(db, "flights"),
-        get_collection(db, "itinerary_days"),
-        get_collection(db, "activities"),
-        get_collection(db, "accommodation"),
-        get_collection(db, "food_places"),
-        get_collection(db, "esims"),
+        db["users"],
+        db["trips"],
+        db["destinations"],
+        db["flights"],
+        db["itinerary_days"],
+        db["activities"],
+        db["accommodation"],
+        db["food_places"],
+        db["esims"],
     )
