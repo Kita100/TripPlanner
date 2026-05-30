@@ -1,0 +1,273 @@
+.payments-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Destination tabs (shared style — also in MobilePage.css) */
+.dest-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dest-tab {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.dest-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.dest-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.pay-section {
+  padding: 20px;
+}
+
+.pay-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0 0 10px;
+}
+
+/* Checklist */
+.checklist-bar {
+  height: 5px;
+  background: var(--border);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.checklist-fill {
+  height: 100%;
+  background: #16a34a;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.checklist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text);
+  cursor: pointer;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.checklist-item:last-child {
+  border-bottom: none;
+}
+
+.checklist-item input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #16a34a;
+  width: 15px;
+  height: 15px;
+}
+
+.checklist-item.done span {
+  color: var(--text-secondary);
+  text-decoration: line-through;
+}
+
+/* Summary banner */
+.pay-summary-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  color: #1e40af;
+  line-height: 1.5;
+}
+
+.pay-summary-banner svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Payment methods list */
+.methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.method-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.method-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+
+.method-info {
+  flex: 1;
+}
+
+.method-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.method-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.method-note {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Info grid */
+.pay-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* Apps list */
+.apps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.app-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.app-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.app-note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ATM / Exchange info blocks */
+.info-block {}
+
+.info-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.info-text {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tips sections */
+.tips-section {
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+}
+
+.watchout-section {
+  background: #fff7ed;
+  border: 1.5px solid #fdba74;
+}
+
+.tips-title-green {
+  color: #15803d !important;
+}
+
+.watchout-title {
+  color: #b45309 !important;
+}
+
+.pay-tips-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pay-tips-list li {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.tips-section .pay-tips-list li {
+  color: #166534;
+}
+
+.watchout-section .pay-tips-list li {
+  color: #92400e;
+}
+
+.no-curated {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.no-curated a {
+  color: var(--primary);
+}

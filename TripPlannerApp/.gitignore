@@ -1,0 +1,20 @@
+# Environment / secrets
+backend/.env
+frontend/.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/.venv/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# MongoDB local data
+backend/mongodata/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,190 @@
+.flights-search-card {
+  margin-bottom: 24px;
+}
+
+.search-results-section {
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.search-results-header {
+  margin-bottom: 14px;
+}
+
+.search-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.flight-results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.flight-result-card {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: all 0.2s;
+  background: white;
+}
+
+.flight-result-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.flight-result-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.flight-result-times {
+  flex: 1;
+  min-width: 0;
+}
+
+.flight-time-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.flight-time {
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.flight-duration-line {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 120px;
+}
+
+.flight-duration {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.flight-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.flight-line-bar {
+  flex: 1;
+  height: 1.5px;
+  background: var(--border-strong);
+}
+
+.flight-stops-label {
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+.flight-route-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.flight-result-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.flight-airline-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.flight-cabin {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.flight-expand-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  padding: 0;
+  font-family: inherit;
+}
+
+.flight-expand-btn:hover { color: var(--accent); }
+
+.flight-detail {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+/* Saved flights */
+.saved-flights {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.saved-flight-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.saved-flight-header {
+  padding: 14px 16px;
+  background: var(--bg-muted);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.saved-flight-body {
+  padding: 16px;
+}
+
+.saved-flight-route {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.saved-flight-time {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.saved-flight-city {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}

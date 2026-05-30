@@ -1,0 +1,92 @@
+.dietary-panel {
+  margin-bottom: 20px;
+}
+
+.dietary-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dietary-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1.5px solid var(--border);
+  background: white;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.dietary-chip:hover { border-color: var(--accent); }
+
+.dietary-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.food-search-bar {
+  margin-bottom: 20px;
+  padding: 14px;
+}
+
+.food-card {
+  padding: 12px;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  transition: all 0.15s;
+}
+
+.food-card.selected { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(14,165,233,0.12); }
+
+.food-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.nearby-food-card {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: white;
+  transition: all 0.2s;
+}
+
+.nearby-food-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+
+.dietary-match-row {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-left: 18px;
+}
+
+.dietary-badge {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  border: 1px solid;
+  font-weight: 500;
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.filter-toggle input { width: auto; margin: 0; }

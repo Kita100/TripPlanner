@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: tripplanner-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONGO_URI
+        sync: false          # set this manually in Render dashboard (your Atlas URI)
+      - key: SECRET_KEY
+        generateValue: true  # Render auto-generates a secure random value
+      - key: DB_NAME
+        value: tripplannerdb

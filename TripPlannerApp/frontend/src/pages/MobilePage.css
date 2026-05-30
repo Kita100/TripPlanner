@@ -1,0 +1,319 @@
+.mobile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Destination tabs */
+.dest-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dest-tab {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.dest-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.dest-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.mobile-section {
+  padding: 20px;
+}
+
+/* Coverage badge */
+.coverage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.coverage-excellent {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.coverage-very-good {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.coverage-good {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.coverage-limited {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Provider grid */
+.provider-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.provider-card {
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--surface);
+  position: relative;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.provider-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.1);
+}
+
+.provider-card.recommended {
+  border-color: #06b6d4;
+  background: #ecfeff;
+}
+
+.rec-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #0891b2;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.provider-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.provider-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.provider-price {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+.provider-data {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.provider-note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.provider-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.provider-link:hover {
+  text-decoration: underline;
+}
+
+/* Tips box */
+.tips-box {
+  background: #fefce8;
+  border: 1.5px solid #fde047;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.tips-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #854d0e;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tips-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tips-list li {
+  font-size: 0.82rem;
+  color: #713f12;
+  line-height: 1.5;
+}
+
+.no-curated {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.no-curated a {
+  color: var(--primary);
+}
+
+/* eSIM budget summary */
+.esim-budget-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+}
+
+/* eSIM list */
+.esim-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.esim-card {
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  background: var(--surface);
+}
+
+.esim-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.esim-provider {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.esim-coverage {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.esim-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.esim-status-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.esim-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.esim-iccid {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--text-tertiary, #94a3b8);
+}
+
+.esim-notes {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  background: var(--bg);
+  border-radius: 6px;
+}
+
+.esim-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.esim-price {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-right: auto;
+}
+
+.btn-success {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1.5px solid #86efac;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-success:hover {
+  background: #bbf7d0;
+}
+
+.empty-state {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 20px 0 8px;
+  text-align: center;
+}
+
+.form-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+}
